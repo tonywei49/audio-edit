@@ -2225,3 +2225,25 @@ body.pk_stndln {
 .pk_aut {
 	box-shadow: 0px 0px 20px #eee, inset 0px 0px 4px gold;
 }
+
+.pk_lang_select {
+    background: transparent;
+    border: none;
+    font-size: 11px;
+    font-weight: bold;
+    color: #333;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    padding: 0 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    text-align: center;
+    text-align-last: center;
+}
+
+.pk_lang_select option {
+    background: #fff;
+    color: #333;
+}
