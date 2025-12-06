@@ -123,10 +123,10 @@
 				name: 'File',
 				children: [
 					{
-						name: 'Export / Download',
+						name: PKI18N._t('menu_export_mp3', 'Export / Download'),
 						action: function () {
 							new PKSimpleModal({
-								title: 'Export / Download',
+								title: PKI18N._t('menu_export_mp3', 'Export / Download'),
 
 								ondestroy: function (q) {
 									app.ui.InteractionHandler.on = false;
@@ -294,7 +294,7 @@
 					},
 
 					{
-						name: 'Load from Computer',
+						name: PKI18N._t('menu_open_local_file', 'Load from Computer'),
 						type: 'file',
 						action: function (e) {
 							app.fireEvent('RequestLoadLocalFile');
@@ -302,14 +302,14 @@
 					},
 
 					{
-						name: 'Load Sample File',
+						name: PKI18N._t('menu_load_url', 'Load From URL'),
 						action: function (e) {
 							app.engine.LoadSample();
 						}
 					},
 
 					{
-						name: 'Load From URL',
+						name: PKI18N._t('menu_load_url', 'Load From URL'),
 						action: function (e) {
 							new PKSimpleModal({
 								title: 'Load audio from remote url',
@@ -379,14 +379,14 @@
 					},
 
 					{
-						name: 'New Recording',
+						name: PKI18N._t('menu_new_recording', 'New Recording'),
 						action: function (e) {
 							app.fireEvent('RequestActionNewRec');
 						}
 					},
 
 					{
-						name: 'Save Draft Locally',
+						name: PKI18N._t('menu_save_draft', 'Save Draft Locally'),
 						clss: 'pk_inact',
 						action: function (e) {
 							if (!app.engine.is_ready) return;
@@ -553,7 +553,7 @@
 					},
 
 					{
-						name: 'Open Local Drafts',
+						name: PKI18N._t('menu_open_drafts', 'Open Local Drafts'),
 						action: function (e) {
 
 							var datenow = new Date();
@@ -835,7 +835,7 @@
 				name: 'Edit',
 				children: [
 					{
-						name: 'Undo <span class="pk_shrtct">Shft+Z</span>',
+						name: PKI18N._t('menu_undo', 'Undo') + ' <span class="pk_shrtct">Shft+Z</span>',
 						clss: 'pk_inact',
 						action: function () {
 							app.fireEvent('StateRequestUndo');
@@ -855,7 +855,7 @@
 					},
 
 					{
-						name: 'Redo <span class="pk_shrtct">Shft+Y</span>',
+						name: PKI18N._t('menu_redo', 'Redo') + ' <span class="pk_shrtct">Shft+Y</span>',
 						clss: 'pk_inact',
 						action: function () {
 							app.fireEvent('StateRequestRedo');
@@ -875,35 +875,35 @@
 					},
 
 					{
-						name: 'Play <span class="pk_shrtct">Space</span>',
+						name: PKI18N._t('menu_play', 'Play') + ' <span class="pk_shrtct">Space</span>',
 						action: function () {
 							app.fireEvent('RequestPlay');
 						}
 					},
 
 					{
-						name: 'Stop',
+						name: PKI18N._t('menu_stop', 'Stop'),
 						action: function () {
 							app.fireEvent('RequestStop');
 						}
 					},
 
 					{
-						name: 'Select All <span class="pk_shrtct">Shft+A</span>',
+						name: PKI18N._t('menu_select_all', 'Select All') + ' <span class="pk_shrtct">Shft+A</span>',
 						action: function () {
 							app.fireEvent('RequestSelect');
 						}
 					},
 
 					{
-						name: 'Deselect All <span class="pk_shrtct">~</span>',
+						name: PKI18N._t('menu_deselect', 'Deselect All') + ' <span class="pk_shrtct">~</span>',
 						action: function () {
 							app.fireEvent('RequestDeselect');
 						}
 					},
 
 					{
-						name: 'Channel Info/Flip',
+						name: PKI18N._t('menu_channel_info', 'Channel Info/Flip'),
 						action: function () {
 							app.fireEvent('RequestActionFXUI_Flip');
 						},
@@ -923,42 +923,42 @@
 				name: 'Effects',
 				children: [
 					{
-						name: 'Gain',
+						name: PKI18N._t('menu_gain', 'Gain'),
 						action: function () {
 							app.fireEvent('RequestFXUI_Gain');
 						}
 					},
 
 					{
-						name: 'Fade In',
+						name: PKI18N._t('menu_fade_in', 'Fade In'),
 						action: function () {
 							app.fireEvent('RequestActionFX_FadeIn');
 						}
 					},
 
 					{
-						name: 'Fade Out',
+						name: PKI18N._t('menu_fade_out', 'Fade Out'),
 						action: function () {
 							app.fireEvent('RequestActionFX_FadeOut');
 						}
 					},
 
 					{
-						name: "Noise Reduction (Voice)",
+						name: PKI18N._t('menu_noise_reduction', 'Noise Reduction (Voice)'),
 						action: function () {
 							app.fireEvent("RequestActionFX_NoiseRNN");
 						},
 					},
 
 					{
-						name: 'Paragraphic EQ',
+						name: PKI18N._t('menu_para_eq', 'Paragraphic EQ'),
 						action: function () {
 							app.fireEvent('RequestActionFXUI_ParaGraphicEQ');
 						}
 					},
 
 					{
-						name: 'Compressor',
+						name: PKI18N._t('menu_compressor', 'Compressor'),
 						action: function () {
 							app.fireEvent('RequestActionFXUI_Compressor');
 						}
@@ -966,42 +966,42 @@
 
 
 					{
-						name: 'Normalize',
+						name: PKI18N._t('menu_normalize', 'Normalize'),
 						action: function () {
 							app.fireEvent('RequestActionFXUI_Normalize');
 						}
 					},
 
 					{
-						name: 'Graphic EQ',
+						name: PKI18N._t('menu_graphic_eq', 'Graphic EQ'),
 						action: function () {
 							app.fireEvent('RequestActionFXUI_GraphicEQ', 10);
 						}
 					},
 
 					{
-						name: 'Graphic EQ (20 bands)',
+						name: PKI18N._t('menu_graphic_eq', 'Graphic EQ (20 bands)'),
 						action: function () {
 							app.fireEvent('RequestActionFXUI_GraphicEQ', 20);
 						}
 					},
 
 					{
-						name: 'Hard Limiter',
+						name: PKI18N._t('menu_hard_limiter', 'Hard Limiter'),
 						action: function () {
 							app.fireEvent('RequestActionFXUI_HardLimiter');
 						}
 					},
 
 					{
-						name: 'Delay',
+						name: PKI18N._t('menu_delay', 'Delay'),
 						action: function () {
 							app.fireEvent('RequestActionFXUI_Delay');
 						}
 					},
 
 					{
-						name: 'Distortion',
+						name: PKI18N._t('menu_distortion', 'Distortion'),
 						action: function () {
 							app.fireEvent('RequestActionFXUI_Distortion');
 						}
@@ -1009,42 +1009,42 @@
 
 
 					{
-						name: 'Reverb',
+						name: PKI18N._t('menu_reverb', 'Reverb'),
 						action: function () {
 							app.fireEvent('RequestActionFXUI_Reverb');
 						}
 					},
 
 					{
-						name: 'Speed Up / Slow Down (pitch)',
+						name: PKI18N._t('menu_speed', 'Speed Up / Slow Down (pitch)'),
 						action: function () {
 							app.fireEvent('RequestActionFXUI_Speed');
 						}
 					},
 
 					{
-						name: 'Playback Rate',
+						name: PKI18N._t('menu_playback_rate', 'Playback Rate'),
 						action: function () {
 							app.fireEvent('RequestActionFXUI_Rate');
 						}
 					},
 
 					{
-						name: 'Reverse',
+						name: PKI18N._t('menu_reverse', 'Reverse'),
 						action: function () {
 							app.fireEvent('RequestActionFX_Reverse');
 						}
 					},
 
 					{
-						name: 'Invert',
+						name: PKI18N._t('menu_invert', 'Invert'),
 						action: function () {
 							app.fireEvent('RequestActionFX_Invert');
 						}
 					},
 
 					{
-						name: 'Remove Silence',
+						name: PKI18N._t('menu_remove_silence', 'Remove Silence'),
 						action: function () {
 							app.fireEvent('RequestActionFX_RemSil');
 						}
@@ -1056,7 +1056,7 @@
 				name: 'View',
 				children: [
 					{
-						name: 'Follow Cursor  &#10004;',
+						name: PKI18N._t('menu_follow_cursor', 'Follow Cursor') + '  &#10004;',
 						action: function (obj) {
 							app.fireEvent('RequestViewFollowCursorToggle');
 						},
@@ -1064,7 +1064,7 @@
 							// perhaps read from stored settings?
 
 							app.listenFor('DidViewFollowCursorToggle', function (val) {
-								var txt = 'Follow Cursor';
+								var txt = PKI18N._t('menu_follow_cursor', 'Follow Cursor');
 
 								if (val) {
 									obj.innerHTML = txt + ' &#10004;';
@@ -1076,13 +1076,13 @@
 					},
 
 					{
-						name: 'Peak Separators &#10004;',
+						name: PKI18N._t('menu_peak_separators', 'Peak Separators') + ' &#10004;',
 						action: function (obj) {
 							app.fireEvent('RequestViewPeakSeparatorToggle');
 						},
 						setup: function (obj) {
 							app.listenFor('DidViewPeakSeparatorToggle', function (val) {
-								var txt = 'Peak Separators';
+								var txt = PKI18N._t('menu_peak_separators', 'Peak Separators');
 								if (val) {
 									obj.innerHTML = txt + ' &#10004;';
 								} else {
@@ -1093,13 +1093,13 @@
 					},
 
 					{
-						name: 'Timeline &#10004;',
+						name: PKI18N._t('menu_timeline', 'Timeline') + ' &#10004;',
 						action: function (obj) {
 							app.fireEvent('RequestViewTimelineToggle');
 						},
 						setup: function (obj) {
 							app.listenFor('DidViewTimelineToggle', function (val) {
-								var txt = 'Timeline';
+								var txt = PKI18N._t('menu_timeline', 'Timeline');
 								if (val) {
 									obj.innerHTML = txt + ' &#10004;';
 								} else {
@@ -1114,7 +1114,7 @@
 					},
 
 					{
-						name: 'Frequency Analyser',
+						name: PKI18N._t('menu_freq_analyser', 'Frequency Analyser'),
 						action: function (obj) {
 							app.fireEvent('RequestShowFreqAn', 'eq', [1]);
 						},
@@ -1122,7 +1122,7 @@
 							app.listenFor('DidToggleFreqAn', function (url, val) {
 								if (url !== 'eq') return;
 
-								var txt = 'Frequency Analyser';
+								var txt = PKI18N._t('menu_freq_analyser', 'Frequency Analyser');
 								if (val) {
 									obj.innerHTML = txt + ' &#10004;';
 								} else {
@@ -1133,7 +1133,7 @@
 					},
 
 					{
-						name: 'Spectrum Analyser',
+						name: PKI18N._t('menu_spec_analyser', 'Spectrum Analyser'),
 						action: function (obj) {
 							app.fireEvent('RequestShowFreqAn', 'sp', [1]);
 						},
@@ -1141,7 +1141,7 @@
 							app.listenFor('DidToggleFreqAn', function (url, val) {
 								if (url !== 'sp') return;
 
-								var txt = 'Spectrum Analyser';
+								var txt = PKI18N._t('menu_spec_analyser', 'Spectrum Analyser');
 								if (val) {
 									obj.innerHTML = txt + ' &#10004;';
 								} else {
@@ -1152,14 +1152,14 @@
 					},
 
 					{
-						name: 'Tempo Tools',
+						name: PKI18N._t('menu_tempo_tools', 'Tempo Tools'),
 						action: function (obj) {
 							app.fireEvent('RequestActionTempo');
 						}
 					},
 
 					{
-						name: 'ID3 Tags',
+						name: PKI18N._t('menu_id3_tags', 'ID3 Tags'),
 						action: function (obj) {
 							app.fireEvent('RequestActionID3');
 						}
@@ -1170,14 +1170,14 @@
 					},
 
 					{
-						name: 'Center to Cursor <span class="pk_shrtct">[Tab]</span>',
+						name: PKI18N._t('menu_center_cursor', 'Center to Cursor') + ' <span class="pk_shrtct">[Tab]</span>',
 						action: function (obj) {
 							app.fireEvent('RequestViewCenterToCursor');
 						}
 					},
 
 					{
-						name: 'Reset Zoom <span class="pk_shrtct">[0]</span>',
+						name: PKI18N._t('menu_reset_zoom', 'Reset Zoom') + ' <span class="pk_shrtct">[0]</span>',
 						action: function (obj) {
 							app.fireEvent('RequestZoomUI', 0);
 						}
@@ -1189,7 +1189,7 @@
 				name: 'Help',
 				children: [
 					{
-						name: 'Store Offline Version',
+						name: PKI18N._t('menu_offline_version', 'Store Offline Version'),
 						action: function () {
 							if (window.location.href.indexOf('-cache') > 0) {
 
@@ -1247,7 +1247,7 @@
 						},
 						setup: function (obj) {
 							if (window.location.href.indexOf('-cache') > 0) {
-								obj.innerHTML = 'Update Offline Version';
+								obj.innerHTML = 'Update Offline Version'; // TODO: Add translation for this too if needed
 							}
 						}
 					},
@@ -1257,7 +1257,7 @@
 					},
 
 					{
-						name: 'About',
+						name: PKI18N._t('menu_about', 'About'),
 						action: function () {
 							window.open('/about.html');
 						}
@@ -1281,7 +1281,7 @@
 					// },
 
 					{
-						name: 'SourceCode on Github',
+						name: PKI18N._t('menu_source_code', 'SourceCode on Github'),
 						action: function () {
 							window.open('https://github.com/pkalogiros/audiomass');
 						}
@@ -2038,14 +2038,14 @@
 		// change temp message, it's pretty ugly #### TODO
 		var ttmp = d.createElement('div');
 		ttmp.className = 'pk_tmpMsg';
-		ttmp.innerHTML = 'Drag & Drop Audio File Here';
+		ttmp.innerHTML = PKI18N._t('msg_drag_drop', 'Drag & Drop Audio File Here');
 
 
 		main_audio_view.appendChild(ttmp);
 
 		var ttmp2 = d.createElement('div');
 		ttmp2.className = 'pk_tmpMsg2';
-		ttmp2.innerHTML = '<span>Please Wait...</span><div class="pk_mload"><div></div></div>' +
+		ttmp2.innerHTML = '<span>' + PKI18N._t('msg_processing', 'Processing...') + '</span><div class="pk_mload"><div></div></div>' +
 			'<div class="pk_prc"><span>0%</span>' +
 			'<button tabIndex="-1" class="pk_btn" ' +
 			'onclick="PKAudioEditor.fireEvent(\'RequestCancelModal\');">cancel</button></div>';
@@ -2825,16 +2825,16 @@
 		var selection = d.createElement('div');
 		selection.className = 'pk_selection';
 		selection.innerHTML = '<div class="pk_sellist">' +
-			'<span class="pk_title">Selection:</span>' +
-			'<div><span class="title">Start:</span><span class="s_s pk_dat">-</span></div>' +
-			'<div><span class="title">End:</span><span class="s_e pk_dat">-</span></div>' +
-			'<div><span  class="title">Duration:</span><span class="s_d pk_dat">-</span></div>' +
+			'<span class="pk_title">' + PKI18N._t('sel_selection', 'Selection:') + '</span>' +
+			'<div><span class="title">' + PKI18N._t('sel_start', 'Start:') + '</span><span class="s_s pk_dat">-</span></div>' +
+			'<div><span class="title">' + PKI18N._t('sel_end', 'End:') + '</span><span class="s_e pk_dat">-</span></div>' +
+			'<div><span  class="title">' + PKI18N._t('sel_duration', 'Duration:') + '</span><span class="s_d pk_dat">-</span></div>' +
 			'</div>';
 
 		var btn_clear_selection = d.createElement('button');
 		btn_clear_selection.setAttribute('tabIndex', -1);
 		btn_clear_selection.className = 'pk_btn icon-clearsel pk_inact';
-		btn_clear_selection.innerHTML = '<span>Clear Selection (Q key)</span>';
+		btn_clear_selection.innerHTML = '<span>' + PKI18N._t('sel_clear', 'Clear Selection (Q key)') + '</span>';
 
 		var sel_spans = selection.getElementsByClassName('pk_dat');
 		UI.listenFor('DidCreateRegion', function (region) {
