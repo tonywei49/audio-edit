@@ -476,8 +476,8 @@
         }
     };
 
-    // Initialize from localStorage or default to 'en'
-    let currentLang = localStorage.getItem('audiomass_lang') || 'en';
+    // Initialize from localStorage or default to 'zh-tw'
+    let currentLang = localStorage.getItem('audiomass_lang') || 'zh-tw';
 
     function _t(key, defaultText) {
         if (translations[currentLang] && translations[currentLang][key]) {
